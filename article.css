@@ -1,0 +1,126 @@
+/* ============================================================
+   MySite - 文章与索引页共享样式表
+   focus / record / archive 三个目录都通过 <link> 引用
+   包含：文章排版、索引页网格
+   ============================================================ */
+
+/* ---------- 文章主体容器 ---------- */
+.article {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 48px var(--page-x);
+}
+
+/* ---------- 文章头部 ---------- */
+.article-header { margin-bottom: 32px; }
+.article-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--carbon-60);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.article-title {
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+/* ---------- 元信息 ---------- */
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 16px 0;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 14px;
+  color: var(--carbon-60);
+  margin-bottom: 32px;
+}
+
+/* ---------- 主图与说明 ---------- */
+.article-hero { width: 100%; margin-bottom: 12px; }
+.article-hero img { width: 100%; }
+
+.article-caption {
+  font-size: 13px;
+  color: var(--carbon-60);
+  margin-bottom: 32px;
+}
+
+/* ---------- 正文 ---------- */
+.article-body p { margin-bottom: 20px; font-size: 17px; }
+.article-body h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 32px 0 16px;
+}
+.article-body ul { margin: 0 0 20px 24px; list-style: disc; }
+.article-body li { margin-bottom: 8px; font-size: 17px; }
+.article-body a { color: var(--nasa-blue); text-decoration: underline; }
+
+/* ---------- 返回链接 ---------- */
+.back-link {
+  display: inline-block;
+  margin-top: 48px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--nasa-blue);
+}
+.back-link:hover { color: var(--nasa-red); }
+
+/* ---------- 索引页网格 ---------- */
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.explore-card { display: block; overflow: hidden; }
+.explore-card img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  transition: transform .3s;
+}
+.explore-card:hover img { transform: scale(1.05); }
+
+.explore-card-body { padding: 16px 0; }
+.explore-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--nasa-red);
+  margin-bottom: 6px;
+}
+.explore-card-body h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.explore-card-body p {
+  font-size: 15px;
+  color: var(--carbon-60);
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 1024px) {
+  .article-title { font-size: 36px; }
+}
+
+@media (max-width: 800px) {
+  .article-title { font-size: 30px; }
+  .article-body p, .article-body li { font-size: 16px; }
+  .explore-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+}
+
+@media (max-width: 640px) {
+  .article { padding: 32px var(--page-x); }
+  .article-title { font-size: 26px; }
+  .article-meta { flex-direction: column; gap: 8px; }
+  .explore-grid { grid-template-columns: 1fr; }
+}
