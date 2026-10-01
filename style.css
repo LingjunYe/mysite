@@ -1,5 +1,5 @@
 /* ============================================================
-   MySite - Home 专属样式表
+   MySite - index 专属样式表
    仅包含主页特有模块：hero / featured-grid / banner / tile-row
    通用部分见 common.css
    ============================================================ */
@@ -126,7 +126,7 @@ section { padding: 64px var(--page-x); }
 .record-section  { background: var(--off-white); }
 .archive-section { background: var(--black); color: var(--white); }
 
-/* ---------- Home 专属响应式 ---------- */
+/* ---------- index 专属响应式 ---------- */
 @media (max-width: 1024px) {
   .hero-title { font-size: 36px; }
 }
